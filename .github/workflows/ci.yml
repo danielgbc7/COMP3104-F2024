@@ -25,3 +25,11 @@ jobs:
 
     - name: Run tests
       run: npm test
+
+    - name: Build project
+      run: npm run build
+
+    - name: Deploy to GitHub Pages
+      run: npm run deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
